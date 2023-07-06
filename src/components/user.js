@@ -1,3 +1,5 @@
+import download from "downloadjs";
+import html2canvas from "html2canvas";
 import { useEffect, useState } from "react";
 
 const User = () => {
@@ -14,6 +16,12 @@ const User = () => {
         getData();
     },[]);
 
+    const downloadfile = async () => {
+        const canvas = await html2canvas(document.body);
+        const dataURL = canvas.toDataURL('image/png');
+        download(dataURL, 'download.png', 'image/png');
+    }
+
     return(
         <>
         {
@@ -22,7 +30,7 @@ const User = () => {
                 <img src={user.avatar} />
             <h1>{user.first_name}</h1>
             <h1>{user.last_name}</h1>
-            <a href=""><button>Download</button></a>
+            <button onClick={downloadfile}>Download</button>
             </>
             ) : <h1>waiting</h1>
         }
