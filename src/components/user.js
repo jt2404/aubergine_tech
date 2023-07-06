@@ -22,6 +22,7 @@ const User = () => {
                 <img src={user.avatar} />
             <h1>{user.first_name}</h1>
             <h1>{user.last_name}</h1>
+            <a href=""><button>Download</button></a>
             </>
             ) : <h1>waiting</h1>
         }

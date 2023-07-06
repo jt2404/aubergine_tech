@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import "./user.css";
 const ListUser = () => {
     const [data1,setData] = useState();
     const getData = async () => {
@@ -18,6 +18,7 @@ const ListUser = () => {
 
     return(
         <>
+                <div className="di">
             {
                 data1 ? (
                     
@@ -29,6 +30,7 @@ const ListUser = () => {
                 ) : 
                 <h1>No data present</h1>
             }
+            </div>
         </>
     )
 }

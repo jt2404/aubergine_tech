@@ -1,0 +1,18 @@
+.div1{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    height: 10rem;
+    column-gap: 20px;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border: 5px solid black;
+    margin: 20px;
+}
+
+.di{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
